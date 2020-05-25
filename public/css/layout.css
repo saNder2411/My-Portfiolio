@@ -31,7 +31,7 @@ body { background: #0f0f0f; }
 #home {
    position: relative;
    height: 800px;
-   min-height: 500px;
+   min-height: 900px;
    width: 100%;
    background: #161415 url(../images/header-background.jpg) no-repeat top center;
    background-size: cover !important;
@@ -187,6 +187,7 @@ ul#nav li a.active { color: #F06000; }
 /* ------------------------------------------------------------------ */
 
 #about {
+   min-height: 900px;
    background: #2B2B2B;
    padding-top: 96px;
    padding-bottom: 66px;
@@ -236,6 +237,7 @@ ul#nav li a.active { color: #F06000; }
 /* ------------------------------------------------------------------ */
 
 #resume {
+   min-height: 900px;
    background: #fff;
    padding-top: 90px;
    padding-bottom: 72px;
@@ -318,7 +320,7 @@ ul#nav li a.active { color: #F06000; }
 
    margin: 0;
    padding-right: 24px;
-  	background: #313131;
+  background: #313131;
    display: inline-block;
   	height: 42px;
    line-height: 42px;
@@ -326,9 +328,9 @@ ul#nav li a.active { color: #F06000; }
 }
 
 .photoshop {
-  	width: 60%;
-  	-moz-animation: photoshop 2s ease;
-  	-webkit-animation: photoshop 2s ease;
+  width: 60%;
+   --moz-animation: photoshop 2s ease;
+   --webkit-animation: photoshop 2s ease;
 }
 .illustrator {
   	width: 55%;
@@ -513,7 +515,7 @@ ul#nav li a.active { color: #F06000; }
 
 /* popup modal */
 .popup-modal {
-	max-width: 550px;
+	max-width: 750px;
 	background: #fff;
 	position: relative;
 	margin: 0 auto;

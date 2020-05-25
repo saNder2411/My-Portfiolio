@@ -1,12 +1,13 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import {NavLink, withRouter} from 'react-router-dom';
 
 
-const Header = () => {
+const Header = ({location}) => {
+  const navClassName = location.pathname === `/` ? `` : `opaque`;
 
   return (
     <header>
-      <nav id="nav-wrap">
+      <nav id="nav-wrap" className={navClassName}>
 
         <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
         <a className="mobile-btn" href="#/" title="Hide navigation">Hide navigation</a>
@@ -24,13 +25,10 @@ const Header = () => {
           <li>
             <NavLink className="smoothscroll" to="/portfolio">Works</NavLink>
           </li>
-          <li>
-            <NavLink className="smoothscroll" to="/contact">Contact</NavLink>
-          </li>
         </ul>
       </nav>
     </header>
   );
 };
 
-export default Header;
+export default withRouter(Header);
