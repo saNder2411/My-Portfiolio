@@ -3,8 +3,14 @@ import React, {useEffect} from 'react';
 
 const PortfolioModal = ({title, imageUrl, hostUrl, description, technologies, setIsShowModal}) => {
 
-  const onLinkClick = (evt) => {
+  const onCloseClick = (evt) => {
     evt.preventDefault();
+    setIsShowModal(false);
+  };
+
+  const onModalClick = (evt) => {
+    if (evt.target.closest(`.popup-modal`)) return;
+
     setIsShowModal(false);
   };
 
@@ -25,20 +31,22 @@ const PortfolioModal = ({title, imageUrl, hostUrl, description, technologies, se
   return (
     <>
       <div className="mfp-bg mfp-fade mfp-ready" />
-
       <div
-        onClick={() => setIsShowModal(false)}
-        onKeyDown={() => setIsShowModal(false)}
+        onClick={onModalClick}
+        onKeyDown={onModalClick}
         role="button"
         label="close"
         className="mfp-wrap mfp-auto-cursor mfp-fade mfp-ready"
         tabIndex="-1">
 
-        <div className="mfp-container mfp-s-ready mfp-inline-holder">
+        <div
+          className="mfp-container mfp-s-ready mfp-inline-holder">
           <div className="mfp-content">
 
             <div className="popup-modal">
-              <img className="scale-with-grid" src={imageUrl} alt="" />
+              <a href={hostUrl}>
+                <img className="scale-with-grid" src={imageUrl} alt="" />
+              </a>
 
               <div className="description-box">
                 <h4>{title}</h4>
@@ -54,14 +62,13 @@ const PortfolioModal = ({title, imageUrl, hostUrl, description, technologies, se
                   Details
                 </a>
                 <a
-                  onClick={onLinkClick}
+                  onClick={onCloseClick}
                   className="popup-modal-dismiss"
                   href="#/">
                   Close
                 </a>
               </div>
             </div>
-
           </div>
         </div>
       </div>

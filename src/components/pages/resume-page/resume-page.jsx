@@ -1,138 +1,77 @@
 import React from 'react';
+import State from '../../../database/database';
 
 const ResumePage = () => {
+  const educationDescription = State.EN.resumePage.education.description.map((item) => (
+    <span key={item}>
+      <span>{item}</span><br />
+    </span>
+  ));
 
   return (
     <section id="resume">
       <div className="row education">
         <div className="three columns header-col">
-          <h1><span>Education</span></h1>
+          <h1><span>{State.EN.resumePage.education.title}</span></h1>
         </div>
         <div className="nine columns main-col">
           <div className="row item">
             <div className="twelve columns">
-              <h3>University of Life</h3>
+              <h3>{State.EN.resumePage.education.university}</h3>
               <p className="info">
-                Master in Graphic Design
+                {State.EN.resumePage.education.department}
                 <span>&bull;</span>
-                <em className="date">April 2007</em>
-              </p>
-
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                Aenean massa.
-                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                Donec quam felis,
-                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                Nullam dictum felis eu pede mollis pretium.
-              </p>
-            </div>
-          </div>
-
-          <div className="row item">
-            <div className="twelve columns">
-              <h3>School of Cool Designers</h3>
-              <p className="info">
-                B.A. Degree in Graphic Design
-                <span>&bull;</span>
-                <em className="date">March 2003</em>
+                <em className="date">{State.EN.resumePage.education.yearEnding}</em>
               </p>
               <p>
-                This is Photoshop&apos;s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-                nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
-                ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
+                {educationDescription}
+              </p>
+              <p>
+                <span>
+                  <a href="https://htmlacademy.ru/profile/id880751/certificates">
+                    {State.EN.resumePage.education.labelLinkCertificates}
+                  </a>
+                </span>
               </p>
             </div>
           </div>
         </div>
       </div>
 
-
-      <div className="row work">
-
+      <div className="row achievements">
         <div className="three columns header-col">
-          <h1><span>Work</span></h1>
+          <h1><span>{State.EN.resumePage.personalAchievements.title}</span></h1>
         </div>
-
         <div className="nine columns main-col">
-
           <div className="row item">
-
             <div className="twelve columns">
-
-              <h3>Awesome Design Studio</h3>
-              <p className="info">Senior UX Designer <span>&bull;</span> <em className="date">March 2010 - Present</em></p>
-
+              <h3>{State.EN.resumePage.personalAchievements.titleAchievements}</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                Nullam dictum felis eu pede mollis pretium.
+                {State.EN.resumePage.personalAchievements.description}
               </p>
-
             </div>
-
           </div>
-
-          <div className="row item">
-
-            <div className="twelve columns">
-
-              <h3>Super Cool Studio</h3>
-              <p className="info">UX Designer <span>&bull;</span> <em className="date">March 2007 - February 2010</em></p>
-
-              <p>
-                This is Photoshop&apos;s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-                nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
-                ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
-              </p>
-
-            </div>
-
-          </div>
-
         </div>
-
       </div>
 
       <div className="row skill">
-
         <div className="three columns header-col">
           <h1><span>Skills</span></h1>
         </div>
-
         <div className="nine columns main-col">
-
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam,
-            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            Nemo enim ipsam
-            voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt.
-          </p>
-
           <div className="bars">
-
             <ul className="skills">
-              <li><span className="bar-expand photoshop" /><em>Photoshop</em></li>
-              <li><span className="bar-expand illustrator" /><em>Illustrator</em></li>
-              <li><span className="bar-expand wordpress" /><em>Wordpress</em></li>
-              <li><span className="bar-expand css" /><em>CSS</em></li>
+              <li><span className="bar-expand javascript" /><em>JavaScript</em></li>
+              <li><span className="bar-expand typescript" /><em>TypeScript</em></li>
+              <li><span className="bar-expand react" /><em>React</em></li>
+              <li><span className="bar-expand react-hooks" /><em>React/Hooks</em></li>
+              <li><span className="bar-expand redux" /><em>Redux</em></li>
               <li><span className="bar-expand html5" /><em>HTML5</em></li>
-              <li><span className="bar-expand jquery" /><em>jQuery</em></li>
+              <li><span className="bar-expand css" /><em>CSS</em></li>
             </ul>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 };

@@ -58,7 +58,7 @@ body { background: #0f0f0f; }
 
 #home .banner-text { width: 100%; }
 #home .banner-text h1 {
-   font: 90px/1.1em 'opensans-bold', sans-serif;
+   font: 50px/1.1em 'opensans-bold', sans-serif;
    color: #fff;
    letter-spacing: -2px;
    margin: 0 auto 18px auto;
@@ -208,13 +208,13 @@ ul#nav li a.active { color: #F06000; }
 }
 #about .profile-pic {
    position: relative;
-   width: 120px;
-   height: 120px;
+   width: 200px;
+   height: 200px;
    border-radius: 100%;
 }
-#about .contact-details { width: 41.66667%; }
+#about .contact-details { width: 50%; }
 #about .download {
-   width: 58.33333%;
+   width: 50%;
    padding-top: 6px;
 }
 #about .main-col { padding-right: 5%; }
@@ -263,7 +263,7 @@ ul#nav li a.active { color: #F06000; }
 #resume .header-col { padding-top: 9px; }
 #resume .main-col { padding-right: 10%; }
 
-.education, .work {
+.education, .achievements {
    margin-bottom: 48px;
    padding-bottom: 24px;
    border-bottom: 1px solid #E8E8E8;
@@ -327,86 +327,99 @@ ul#nav li a.active { color: #F06000; }
    border-radius: 3px 0 0 3px;
 }
 
-.photoshop {
-  width: 60%;
-   --moz-animation: photoshop 2s ease;
-   --webkit-animation: photoshop 2s ease;
+.javascript {
+  width: 80%;
+   -moz-animation: javascript 15s ease;
+   -webkit-animation: javascript 15s ease;
 }
-.illustrator {
-  	width: 55%;
-  	-moz-animation: illustrator 2s ease;
-  	-webkit-animation: illustrator 2s ease;
+.typescript {
+  	width: 70%;
+  	-moz-animation: typescript 15s ease;
+  	-webkit-animation: typescript 15s ease;
 }
-.wordpress {
-  	width: 50%;
-  	-moz-animation: wordpress 2s ease;
-  	-webkit-animation: wordpress 2s ease;
+.react {
+  	width: 80%;
+  	-moz-animation: react 15s ease;
+  	-webkit-animation: react 15s ease;
 }
-.css {
-  	width: 90%;
-  	-moz-animation: css 2s ease;
-  	-webkit-animation: css 2s ease;
+.react-hooks {
+   width: 75%;
+   -moz-animation: react-hooks 15s ease;
+   -webkit-animation: react-hooks 15s ease;
+}
+.redux {
+   width: 80%;
+   -moz-animation: redux 15s ease;
+   -webkit-animation: redux 15s ease;
 }
 .html5 {
-  	width: 80%;
-  	-moz-animation: html5 2s ease;
-  	-webkit-animation: html5 2s ease;
+   width: 80%;
+   -moz-animation: html5 15s ease;
+   -webkit-animation: html5 15s ease;
 }
-.jquery {
-  	width: 50%;
-  	-moz-animation: jquery 2s ease;
-  	-webkit-animation: jquery 2s ease;
+.css {
+  	width: 80%;
+  	-moz-animation: css 15s ease;
+  	-webkit-animation: css 15s ease;
 }
 
-@-moz-keyframes photoshop {
+@-moz-keyframes javascript {
   0%   { width: 0px;  }
-  100% { width: 60%;  }
+  100% { width: 80%;  }
 }
-@-moz-keyframes illustrator {
+@-moz-keyframes typescript {
   0%   { width: 0px;  }
-  100% { width: 55%;  }
+  100% { width: 70%;  }
 }
-@-moz-keyframes wordpress {
+@-moz-keyframes react {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 80%;  }
+}
+@-moz-keyframes react-hooks {
+   0%   { width: 0px;  }
+   100% { width: 75%;  }
+}
+@-moz-keyframes redux {
+   0%   { width: 0px;  }
+   100% { width: 80%;  }
+}
+@-moz-keyframes html5 {
+   0%   { width: 0px;  }
+   100% { width: 80%;  }
 }
 @-moz-keyframes css {
   0%   { width: 0px;  }
-  100% { width: 90%;  }
+  100% { width: 80%;  }
 }
-@-moz-keyframes html5 {
+@-webkit-keyframes javascript {
   0%   { width: 0px;  }
   100% { width: 80%;  }
 }
-@-moz-keyframes jquery {
+@-webkit-keyframes typescript {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 70%;  }
 }
-
-@-webkit-keyframes photoshop {
+@-webkit-keyframes react {
   0%   { width: 0px;  }
-  100% { width: 60%;  }
+  100% { width: 80%;  }
 }
-@-webkit-keyframes illustrator {
-  0%   { width: 0px;  }
-  100% { width: 55%;  }
+@-webkit-keyframes react-hooks {
+   0%   { width: 0px;  }
+   100% { width: 75%;  }
 }
-@-webkit-keyframes wordpress {
-  0%   { width: 0px;  }
-  100% { width: 50%;  }
+@-webkit-keyframes redux {
+   0%   { width: 0px;  }
+   100% { width: 80%;  }
+}
+@-webkit-keyframes html5 {
+   0%   { width: 0px;  }
+   100% { width: 80%;  }
 }
 @-webkit-keyframes css {
   0%   { width: 0px;  }
-  100% { width: 90%;  }
-}
-@-webkit-keyframes html5 {
-  0%   { width: 0px;  }
   100% { width: 80%;  }
 }
-@-webkit-keyframes jquery {
-  0%   { width: 0px;  }
-  100% { width: 50%;  }
-}
+
 
 /* ------------------------------------------------------------------ */
 /* e. Portfolio Section

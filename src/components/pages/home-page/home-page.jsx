@@ -1,5 +1,5 @@
 import React from 'react';
-
+import State from '../../../database/database';
 
 const HomePage = () => {
 
@@ -7,13 +7,9 @@ const HomePage = () => {
     <section id="home">
       <div className="row banner">
         <div className="banner-text">
-          <h2 className="responsive-headline">I&apos;m Alexander Olshansky.</h2>
+          <h1 className="responsive-headline">{State.EN.homePage.title}</h1>
           <h3>
-            I&apos;m a Manila based <span>graphic designer</span>,
-            <span>illustrator</span> and <span>webdesigner</span> creating awesome and
-            effective visual identities for companies of all sizes around the globe. Let&apos;s
-            <a className="smoothscroll" href="#about">start scrolling</a>
-            and learn more <a className="smoothscroll" href="#about">about me</a>.
+            <span>{State.EN.homePage.aboutMe}</span>
           </h3>
           <hr />
           <ul className="social">
