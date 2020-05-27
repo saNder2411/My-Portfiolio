@@ -1,0 +1,7 @@
+const LanguageActionTypes = {
+  FETCH_LANG_REQUEST: `FETCH_LANG_REQUEST`,
+  FETCH_LANG_SUCCESS: `FETCH_LANG_SUCCESS`,
+  FETCH_LANG_FAILURE: `FETCH_LANG_FAILURE`,
+};
+
+export default LanguageActionTypes;

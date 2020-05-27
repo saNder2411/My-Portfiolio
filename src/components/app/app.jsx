@@ -1,5 +1,8 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
+
+import useLanguage from '../../hooks/use-language/use-language';
+
 import Header from '../header/header';
 import HomePage from '../pages/home-page/home-page';
 import AboutPage from '../pages/about-page/about-page';
@@ -10,7 +13,22 @@ import Footer from '../footer/footer';
 
 const App = () => {
 
-  return (
+  const [{isLoading, data, error}] = useLanguage(`RU`);
+
+  if (error) {
+    return <div>Something is wrong</div>;
+  }
+
+  if (isLoading) {
+    return (
+      <div className="loader">
+        <img src="images/loader.gif" alt="" />
+      </div>
+    );
+  }
+
+
+  return !data ? null : (
     <>
       <Header />
       <Switch>

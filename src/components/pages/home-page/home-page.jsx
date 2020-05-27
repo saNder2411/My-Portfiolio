@@ -1,15 +1,18 @@
-import React from 'react';
-import State from '../../../database/database';
+import React, {useContext} from 'react';
+import {LanguageContext} from '../../../contexts/language-context/language-context';
 
 const HomePage = () => {
+
+  const [{data: {homePage}}] = useContext(LanguageContext);
+  const {title, aboutMe} = homePage;
 
   return (
     <section id="home">
       <div className="row banner">
         <div className="banner-text">
-          <h1 className="responsive-headline">{State.EN.homePage.title}</h1>
+          <h1 className="responsive-headline">{title}</h1>
           <h3>
-            <span>{State.EN.homePage.aboutMe}</span>
+            <span>{aboutMe}</span>
           </h3>
           <hr />
           <ul className="social">

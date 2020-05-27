@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
 import './index.css';
 import App from './components/app/app';
+import {LanguageProvider} from './contexts/language-context/language-context';
 
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
+  <LanguageProvider>
+    <Router>
+      <App />
+    </Router>
+  </LanguageProvider>,
   document.getElementById(`root`),
 );

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledLangButton = styled.button`
+const StyledSelectLang = styled.select`
   position: absolute;
   left: 1%;
   font: 12px 'opensans-bold', sans-serif;
@@ -14,11 +14,14 @@ const StyledLangButton = styled.button`
   margin: 0;
   cursor: pointer;
   height: auto;
-
-  &:hover {
-    background: transparent;
+  outline: none;
+  min-width: auto;
+  appearance: none;
+  
+  & option {
+    color:  #333;
   }
 `;
 
 
-export default StyledLangButton;
+export default StyledSelectLang;

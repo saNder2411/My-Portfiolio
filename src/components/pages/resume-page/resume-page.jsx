@@ -1,8 +1,13 @@
-import React from 'react';
-import State from '../../../database/database';
+import React, {useContext} from 'react';
+import {LanguageContext} from '../../../contexts/language-context/language-context';
 
 const ResumePage = () => {
-  const educationDescription = State.EN.resumePage.education.description.map((item) => (
+
+  const [{data: {resumePage}}] = useContext(LanguageContext);
+  const {education, personalAchievements} = resumePage;
+  const {description, title, university, department, yearEnding, labelLinkCertificates} = education;
+
+  const educationDescription = description.map((item) => (
     <span key={item}>
       <span>{item}</span><br />
     </span>
@@ -12,16 +17,16 @@ const ResumePage = () => {
     <section id="resume">
       <div className="row education">
         <div className="three columns header-col">
-          <h1><span>{State.EN.resumePage.education.title}</span></h1>
+          <h1><span>{title}</span></h1>
         </div>
         <div className="nine columns main-col">
           <div className="row item">
             <div className="twelve columns">
-              <h3>{State.EN.resumePage.education.university}</h3>
+              <h3>{university}</h3>
               <p className="info">
-                {State.EN.resumePage.education.department}
+                {department}
                 <span>&bull;</span>
-                <em className="date">{State.EN.resumePage.education.yearEnding}</em>
+                <em className="date">{yearEnding}</em>
               </p>
               <p>
                 {educationDescription}
@@ -29,7 +34,7 @@ const ResumePage = () => {
               <p>
                 <span>
                   <a href="https://htmlacademy.ru/profile/id880751/certificates">
-                    {State.EN.resumePage.education.labelLinkCertificates}
+                    {labelLinkCertificates}
                   </a>
                 </span>
               </p>
@@ -40,14 +45,14 @@ const ResumePage = () => {
 
       <div className="row achievements">
         <div className="three columns header-col">
-          <h1><span>{State.EN.resumePage.personalAchievements.title}</span></h1>
+          <h1><span>{personalAchievements.title}</span></h1>
         </div>
         <div className="nine columns main-col">
           <div className="row item">
             <div className="twelve columns">
-              <h3>{State.EN.resumePage.personalAchievements.titleAchievements}</h3>
+              <h3>{personalAchievements.titleAchievements}</h3>
               <p>
-                {State.EN.resumePage.personalAchievements.description}
+                {personalAchievements.description}
               </p>
             </div>
           </div>

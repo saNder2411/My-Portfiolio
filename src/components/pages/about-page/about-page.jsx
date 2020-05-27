@@ -1,9 +1,12 @@
-import React from 'react';
-import State from '../../../database/database';
+import React, {useContext} from 'react';
+import {LanguageContext} from '../../../contexts/language-context/language-context';
 
 const AboutPage = () => {
 
-  const contacts = State.EN.aboutMePage.contactDetails.map((item) => (
+  const [{data: {aboutMePage}}] = useContext(LanguageContext);
+  const {contactDetails, title, description, contactTitle} = aboutMePage;
+
+  const contacts = contactDetails.map((item) => (
     <span key={item}>
       <span>{item}</span><br />
     </span>
@@ -16,12 +19,12 @@ const AboutPage = () => {
           <img className="profile-pic" src="images/profilepic.jpg" alt="" />
         </div>
         <div className="nine columns main-col">
-          <h2>{State.EN.aboutMePage.title}</h2>
+          <h2>{title}</h2>
 
-          <p>{State.EN.aboutMePage.description}</p>
+          <p>{description}</p>
           <div className="row">
             <div className="columns contact-details">
-              <h2>{State.EN.aboutMePage.contactTitle}</h2>
+              <h2>{contactTitle}</h2>
               <p className="address">
                 {contacts}
               </p>
