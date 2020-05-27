@@ -13,7 +13,7 @@ import Footer from '../footer/footer';
 
 const App = () => {
 
-  const [{isLoading, data, error}] = useLanguage(`RU`);
+  const [{isLoading, data, error}] = useLanguage(`EN`);
 
   if (error) {
     return <div>Something is wrong</div>;

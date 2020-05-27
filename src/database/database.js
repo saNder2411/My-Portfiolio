@@ -134,7 +134,7 @@ const Data = {
           id: `3`,
           title: `Star Wars DB`,
           imageUrl: `images/portfolio/3.png`,
-          hostUrl: `hhttps://starwar-db-react-context-api.web.app`,
+          hostUrl: `https://starwar-db-react-context-api.web.app`,
           technologies: `React/Context API`,
           description: `
             "Star Wars DB" is an illustrated database about of characters,
@@ -331,7 +331,7 @@ const Data = {
           id: `3`,
           title: `Star Wars DB`,
           imageUrl: `images/portfolio/3.png`,
-          hostUrl: `hhttps://starwar-db-react-context-api.web.app`,
+          hostUrl: `https://starwar-db-react-context-api.web.app`,
           technologies: `React/Context API`,
           description: `
             "Star Wars DB" - это иллюстрированная база данных про

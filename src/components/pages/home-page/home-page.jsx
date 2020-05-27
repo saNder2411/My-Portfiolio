@@ -17,22 +17,22 @@ const HomePage = () => {
           <hr />
           <ul className="social">
             <li>
-              <a href="/">
+              <a href="https://www.facebook.com/profile.php?id=100023636915177">
                 <i className="fa fa-facebook" />
               </a>
             </li>
             <li>
-              <a href="/">
-                <i className="fa fa-twitter" />
+              <a href="https://github.com/saNder2411">
+                <i className="fa fa-github" />
               </a>
             </li>
             <li>
-              <a href="/">
-                <i className="fa fa-linkedin" />
+              <a href="https://t.me/Alexandr_Olshanskiy">
+                <i className="fa fa-telegram" />
               </a>
             </li>
             <li>
-              <a href="/">
+              <a href="live:27e73c79fb62325b">
                 <i className="fa fa-skype" />
               </a>
             </li>
