@@ -1,6 +1,7 @@
 import React from 'react';
 import withLanguageState from '../../../hocs/with-language-state/with-language-state';
 
+
 const AboutPage = ({languageState: {aboutMePage}}) => {
 
   const {contactDetails, title, description, contactTitle, resumePath} = aboutMePage;
@@ -19,7 +20,6 @@ const AboutPage = ({languageState: {aboutMePage}}) => {
         </div>
         <div className="nine columns main-col">
           <h2>{title}</h2>
-
           <p>{description}</p>
           <div className="row">
             <div className="columns contact-details">

@@ -3,6 +3,7 @@ import {LanguageContext} from '../../contexts/language-context/language-context'
 
 
 const withLanguageState = (Component) => (props) => {
+
   const [{isLoadingLang, langData, langError}] = useContext(LanguageContext);
 
   const hasData = !(isLoadingLang || langError) && langData;

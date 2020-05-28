@@ -10,7 +10,6 @@ const initialState = {
 
 const LanguageContext = createContext();
 
-
 const LanguageProvider = ({children}) => {
 
   const value = useReducer(languageReducer, initialState);

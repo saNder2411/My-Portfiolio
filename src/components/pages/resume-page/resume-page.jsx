@@ -1,6 +1,7 @@
 import React from 'react';
 import withLanguageState from '../../../hocs/with-language-state/with-language-state';
 
+
 const ResumePage = ({languageState: {resumePage}}) => {
 
   const {education, personalAchievements} = resumePage;

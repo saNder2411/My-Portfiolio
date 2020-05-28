@@ -3,6 +3,7 @@ import PortfolioModal from '../portfolio-modal/portfolio-modal';
 
 
 const PortfolioItem = ({title, imageUrl, hostUrl, description, technologies}) => {
+
   const [isShowModal, setIsShowModal] = useState(false);
 
   const onLinkClick = (evt) => {

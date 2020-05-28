@@ -1,7 +1,9 @@
 import React from 'react';
 import withLanguageState from '../../../hocs/with-language-state/with-language-state';
 
+
 const HomePage = ({languageState: {homePage}}) => {
+
   const {title, aboutMe} = homePage;
 
   return (

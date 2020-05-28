@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {withRouter} from 'react-router-dom';
+
 import useService from '../../hooks/use-service/use-service';
 import {LanguageContext} from '../../contexts/language-context/language-context';
 import {languageRequest, languageLoaded, languageHasError} from '../../contexts/language-context/language-action-creator';
@@ -35,9 +36,7 @@ const HeaderContainer = ({location}) => {
   }, [error, dispatch]);
 
 
-  const onLanguageChange = (evt) => {
-    setLangState(evt.target.value);
-  };
+  const onLanguageChange = (evt) => setLangState(evt.target.value);
 
   const hasData = !(isLoadingLang || langError) && langData;
 

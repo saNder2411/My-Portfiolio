@@ -350,7 +350,7 @@ ul#nav li a.active { color: #F06000; }
   	-webkit-animation: react 15s ease;
 }
 .react-hooks {
-   width: 75%;
+   width: 77%;
    -moz-animation: react-hooks 15s ease;
    -webkit-animation: react-hooks 15s ease;
 }
@@ -365,7 +365,7 @@ ul#nav li a.active { color: #F06000; }
    -webkit-animation: html5 15s ease;
 }
 .css {
-  	width: 80%;
+  	width: 77%;
   	-moz-animation: css 15s ease;
   	-webkit-animation: css 15s ease;
 }
@@ -384,7 +384,7 @@ ul#nav li a.active { color: #F06000; }
 }
 @-moz-keyframes react-hooks {
    0%   { width: 0px;  }
-   100% { width: 75%;  }
+   100% { width: 77%;  }
 }
 @-moz-keyframes redux {
    0%   { width: 0px;  }
@@ -396,7 +396,7 @@ ul#nav li a.active { color: #F06000; }
 }
 @-moz-keyframes css {
   0%   { width: 0px;  }
-  100% { width: 80%;  }
+  100% { width: 77%;  }
 }
 @-webkit-keyframes javascript {
   0%   { width: 0px;  }
@@ -412,7 +412,7 @@ ul#nav li a.active { color: #F06000; }
 }
 @-webkit-keyframes react-hooks {
    0%   { width: 0px;  }
-   100% { width: 75%;  }
+   100% { width: 77%;  }
 }
 @-webkit-keyframes redux {
    0%   { width: 0px;  }
@@ -424,7 +424,7 @@ ul#nav li a.active { color: #F06000; }
 }
 @-webkit-keyframes css {
   0%   { width: 0px;  }
-  100% { width: 80%;  }
+  100% { width: 77%;  }
 }
 
 
@@ -858,8 +858,8 @@ call-to-action .button {
    font: 15px/24px 'opensans-bold', sans-serif;
    margin: 12px 0;
    color: #EBEEEE;
-	display: inline-block;
-	float: left;
+   display: inline-block;
+   float: left;
    width: 26%;
 }
 #contact input,
