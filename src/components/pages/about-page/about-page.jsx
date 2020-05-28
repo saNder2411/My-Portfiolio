@@ -1,10 +1,9 @@
-import React, {useContext} from 'react';
-import {LanguageContext} from '../../../contexts/language-context/language-context';
+import React from 'react';
+import withLanguageState from '../../../hocs/with-language-state/with-language-state';
 
-const AboutPage = () => {
+const AboutPage = ({languageState: {aboutMePage}}) => {
 
-  const [{data: {aboutMePage}}] = useContext(LanguageContext);
-  const {contactDetails, title, description, contactTitle} = aboutMePage;
+  const {contactDetails, title, description, contactTitle, resumePath} = aboutMePage;
 
   const contacts = contactDetails.map((item) => (
     <span key={item}>
@@ -31,7 +30,7 @@ const AboutPage = () => {
             </div>
             <div className="columns download">
               <p>
-                <a href="alex-resume/resume-alex-olshansky-en.pdf" download className="button">
+                <a href={`my-resume/${resumePath}`} download className="button">
                   <i className="fa fa-download" />
                   Download Resume
                 </a>
@@ -44,4 +43,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default withLanguageState(AboutPage);

@@ -2,14 +2,12 @@ const Data = {
 
   EN: {
 
-    lang: `EN`,
-
-    navMenuEn: {
+    navMenu: {
       home: `Home`,
       about: `About`,
       resume: `Resume`,
       works: `Works`,
-      lang: `Lang(En)`,
+      lang: `EN`,
     },
 
     homePage: {
@@ -23,6 +21,7 @@ const Data = {
     aboutMePage: {
       title: `About Me`,
       contactTitle: `Contact Details`,
+      resumePath: `resume-alex-olshansky-en.pdf`,
       description: `
         Open, benevolent and purposeful. I have a high passion and interest in technology.
         Constantly improving my professional skills. I am very responsible for work.
@@ -79,7 +78,7 @@ const Data = {
           after processing the data in reducer,
           the HOC withData passes the request state (loading, data, error) to the props UI component.
           When I use hooks, in a nutshell, I do almost the same, only on custom hooks.
-          A useService hook that interacts with an instance of the DAL class and calls the useRequest hook,
+          A useService hook interacts with an instance of the DAL class and calls the useRequest hook,
           which passes the necessary method for the request. useRequest returns an array
           with a request status object and a function to call this request ([{loading, data, error}, doRequest]).
           doRequest is called either when mounting / updating the UI component in the useEffect hook or in an event handler.
@@ -195,21 +194,19 @@ const Data = {
 
   RU: {
 
-    lang: `RU`,
-
     navMenu: {
       home: `Главная`,
       about: `Oбо Мне`,
       resume: `Резюме`,
       works: `Работы`,
-      lang: `Ru`,
+      lang: `RU`,
     },
 
     homePage: {
       title: `Привет, Я Александр Ольшанский.`,
       aboutMe: `
         Я начинающий React разработчик UI интерфейсов,
-        с большой страстью и любовью к программированию веб приложений.
+        с большой увлеченностью и любовью к программированию веб приложений.
         Здесь вы можете ознакомиться с моими работами и резюме.
       `,
     },
@@ -217,6 +214,7 @@ const Data = {
     aboutMePage: {
       title: `Oбо Мне`,
       contactTitle: `Контактная Информация`,
+      resumePath: `resume-alex-olshansky-ru.pdf`,
       description: `
         Открытый, доброжелательный и целеустремленный. Обладаю высокой увлеченностью и интересом к технологиям.
         Постоянно занимаюсь улучшением своих профессиональных навыков. К работе отношусь очень ответственно.
@@ -254,12 +252,12 @@ const Data = {
         titleAchievements: `Личные Достижения`,
         description: `
           Успешно окончил 12-ти месячный профессиональный курс в HTMLAcademy "React-разработчик".
-          Во время обучения защитил все личный проект на 100 баллов. Разрабатываю на  TypeScript React/Redux, React/Hooks,
+          Во время обучения защитил все личный проект на 100 баллов. Разрабатываю на TypeScript React/Redux, React/Hooks,
           в небольших приложениях пользуюсь PropTypes. Тестирую с помощью Jest и Enzym.
           Оптимизировал производительность приложений
-          с использованием встроенного  браузерного профайлера, для разработки и отладки работаю с «React dev Tools»,
-          «Redux dev Tools». Отлично знаком с работой  над иммутабельными объектами: React(component state),
-          Redux(srore state: добавление иудаление элементов в массиве, обновление свойств элемента и тд.).
+          с использованием встроенного браузерного профайлера, для разработки и отладки работаю с «React dev Tools»,
+          «Redux dev Tools». Отлично знаком с работой над иммутабельными объектами: React(component state),
+          Redux(srore state: добавление и удаление элементов в массиве, обновление свойств элемента и тд.).
           Знаком с Store Enhancers, активно использую Middleware.
           Для диспатча async call использую Thunk Middleware.
           Взаимодействие с REST API: XHR, метод Fetch, библиотека для создания HTTP-клиента Axios, Promise, Async/Await.
@@ -274,7 +272,7 @@ const Data = {
           данных в reducer, HOC withData через mapStateToProps передает в props UI компонента состояние
           запроса(loading, data, error).При использовании хуков, в двух словах, делаю практически также,
           только на кастомных хуках.
-          Хук useService который взаимодействует с экземпляром DAL класса и вызывает хук useRequest,
+          Хук useService взаимодействует с экземпляром DAL класса и вызывает хук useRequest,
           в который передает необходимый
           метод для запроса. useRequest возвращает массив с объектом состояния запроса и функцией для вызова этого
           запроса([{loding, data, error}, doRequset]). doRequset вызываеться либо при монтировании/обновлении
@@ -285,14 +283,14 @@ const Data = {
           ООП: Adapter, Singltone, Observer, Controller, Factory Method,
           Abstract Factory, Decorator. В контроллерах и презентерах реализовывал data-binding,
           помимо callback-ов, c помощью объектов Proxy и Reflect.
-          Считаю одним из главных принципов SOLID  принцип единственной ответственности. По этому всегда разделяю
+          Считаю одним из главных принципов SOLID принцип единственной ответственности. По этому всегда разделяю
           архитектуру приложения на уровни: UI(React)<=>BLL(Redux)<=>DAL(API Service).
           UI компоненты не должны содержать никакой
           логики и отвечать только за рендеринг, это всегда простые функции которые легко тестировать.
           Реализовывал: кастомную валидацию форм, формы с контролируемым и
           не контролируемым компонентом, Drag'n'Drop с событиями
           мыши на native JS (слайдеры, перетаскивание маркеров), диаграмму активности пользователя с библиотекой chart.js.
-          Работал с интерфейсами  HTMLVideoElement и HTMLAudioElement в проектах с видео и аудио данными.
+          Работал с интерфейсами HTMLVideoElement и HTMLAudioElement в проектах с видео и аудио данными.
           Стилизацию компонентов делаю с «styled-components» и «css-modules». 
           Пользуюсь вспомогательными библиотеками: «reselect», «query-string», «classnames», «nanoid», «he»,
           «flatpickr.js», «chart.js», «moment.js». Помимо использования «create-react-app»,

@@ -24,9 +24,11 @@
 
 body { background: #0f0f0f; }
 
-.loader img{
+.loader img {
+   position: absolute;
+   left: calc(50% - 24px);
+   top: 40%;
    display: block;
-   margin: 30% auto;
 }
 
 /* ------------------------------------------------------------------ */

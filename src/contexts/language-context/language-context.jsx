@@ -3,9 +3,9 @@ import languageReducer from './language-reducer';
 
 
 const initialState = {
-  isLoading: false,
-  data: null,
-  error: null,
+  isLoadingLang: false,
+  langData: null,
+  langError: null,
 };
 
 const LanguageContext = createContext();

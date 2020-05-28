@@ -1,9 +1,8 @@
-import React, {useContext} from 'react';
-import {LanguageContext} from '../../../contexts/language-context/language-context';
+import React from 'react';
+import withLanguageState from '../../../hocs/with-language-state/with-language-state';
 
-const ResumePage = () => {
+const ResumePage = ({languageState: {resumePage}}) => {
 
-  const [{data: {resumePage}}] = useContext(LanguageContext);
   const {education, personalAchievements} = resumePage;
   const {description, title, university, department, yearEnding, labelLinkCertificates} = education;
 
@@ -81,4 +80,4 @@ const ResumePage = () => {
   );
 };
 
-export default ResumePage;
+export default withLanguageState(ResumePage);

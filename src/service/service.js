@@ -8,7 +8,7 @@ class APIService {
 
   getData = async (lang) => {
     const res = await new Promise((resolve) => {
-      setTimeout(() => resolve(this._data[lang]), 300);
+      setTimeout(() => resolve(this._data[lang]), 0);
     });
 
     return res;

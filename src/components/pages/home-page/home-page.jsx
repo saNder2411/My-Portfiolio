@@ -1,9 +1,7 @@
-import React, {useContext} from 'react';
-import {LanguageContext} from '../../../contexts/language-context/language-context';
+import React from 'react';
+import withLanguageState from '../../../hocs/with-language-state/with-language-state';
 
-const HomePage = () => {
-
-  const [{data: {homePage}}] = useContext(LanguageContext);
+const HomePage = ({languageState: {homePage}}) => {
   const {title, aboutMe} = homePage;
 
   return (
@@ -43,4 +41,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default withLanguageState(HomePage);

@@ -3,13 +3,14 @@ import {NavLink, withRouter} from 'react-router-dom';
 import StyledSelectLang from './styled-header';
 
 
-const Header = ({location}) => {
-  const navClassName = location.pathname === `/` ? `` : `opaque`;
+const Header = ({navClassName, languageState, onLanguageChange}) => {
+
+  const {lang, home, about, resume, works} = languageState.navMenu;
 
   return (
     <header>
       <nav id="nav-wrap" className={navClassName}>
-        <StyledSelectLang name="lang">
+        <StyledSelectLang name="lang" onChange={onLanguageChange} defaultValue={lang}>
           <option value="EN">EN</option>
           <option value="RU">RU</option>
         </StyledSelectLang>
@@ -19,16 +20,16 @@ const Header = ({location}) => {
 
         <ul id="nav" className="nav">
           <li className="current">
-            <NavLink className="smoothscroll" to="/" exact>Home</NavLink>
+            <NavLink className="smoothscroll" to="/" exact>{home}</NavLink>
           </li>
           <li>
-            <NavLink className="smoothscroll" to="/about">About</NavLink>
+            <NavLink className="smoothscroll" to="/about">{about}</NavLink>
           </li>
           <li>
-            <NavLink className="smoothscroll" to="/resume">Resume</NavLink>
+            <NavLink className="smoothscroll" to="/resume">{resume}</NavLink>
           </li>
           <li>
-            <NavLink className="smoothscroll" to="/portfolio">Works</NavLink>
+            <NavLink className="smoothscroll" to="/portfolio">{works}</NavLink>
           </li>
         </ul>
       </nav>

@@ -1,10 +1,8 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import PortfolioList from './portfolio-list/portfolio-list';
-import {LanguageContext} from '../../../contexts/language-context/language-context';
+import withLanguageState from '../../../hocs/with-language-state/with-language-state';
 
-const PortfolioPage = () => {
-
-  const [{data: {portfolioPage}}] = useContext(LanguageContext);
+const PortfolioPage = ({languageState: {portfolioPage}}) => {
   const {title, projects} = portfolioPage;
 
   return (
@@ -19,4 +17,4 @@ const PortfolioPage = () => {
   );
 };
 
-export default PortfolioPage;
+export default withLanguageState(PortfolioPage);
